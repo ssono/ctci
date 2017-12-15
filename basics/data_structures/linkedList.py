@@ -86,8 +86,9 @@ class linkedList:
 
 class orderedLinkedList(linkedList):
 
-    #recursively find spot for new node, then insert
+    #find spot for new node, then insert
     def add(self, newdata):
+        #if empty set as head
         if(self.head == None):
             newhead = Node(newdata)
             self.head = newhead
@@ -96,33 +97,15 @@ class orderedLinkedList(linkedList):
         head = self.head
         prev = None
 
+        #find first elem >= newdata
         while(head != None and newdata > head.getData()):
                 prev = head
                 head = head.getNext()
 
-
+        #insert node and connect around
         newnode = Node(newdata)
         newnode.setNext(head)
         if(prev != None):
             prev.setNext(newnode)
         if(head == self.head):
             self.head = newnode
-
-l = orderedLinkedList()
-l.add(1)
-l.add(7)
-l.add(5)
-l.add(3)
-l.add(9)
-print(l)
-print(l.search(5))
-print(l.search(6))
-print(l.size())
-print(l.remove(6))
-print(l.remove(5))
-print(l)
-print(l.size())
-print(l.remove(1))
-print(l)
-print(l.remove(9))
-print(l)
