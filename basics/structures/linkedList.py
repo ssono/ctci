@@ -1,4 +1,4 @@
-class Node:
+class LinkNode:
 
     def __init__(self, data):
         self.data = data
@@ -40,7 +40,7 @@ class linkedList:
             return False
     #adds to the front
     def add(self, newdata):
-        newhead = Node(newdata)
+        newhead = LinkNode(newdata)
         newhead.setNext(self.head)
         self.head = newhead
 
@@ -90,7 +90,7 @@ class orderedLinkedList(linkedList):
     def add(self, newdata):
         #if empty set as head
         if(self.head == None):
-            newhead = Node(newdata)
+            newhead = LinkNode(newdata)
             self.head = newhead
             return
 
@@ -102,8 +102,8 @@ class orderedLinkedList(linkedList):
                 prev = head
                 head = head.getNext()
 
-        #insert node and connect around
-        newnode = Node(newdata)
+        #insert node and patch around
+        newnode = LinkNode(newdata)
         newnode.setNext(head)
         if(prev != None):
             prev.setNext(newnode)

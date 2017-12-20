@@ -1,0 +1,13 @@
+The purpose of BFS is to find the shortest path from a vertex to any other vertex.
+This is done by radially searching outwards from origin vertex.
+
+Procedure:
+Current = Origin
+1. Set all vertices to white
+
+2.Add all white vertices adjacent to current to queue and color them gray. Set parent and all gray adjacent as black.
+  Gray means in the queue already.
+3.For every Node added to queue set its distance from origin to distance to current from origin + 1
+
+4. repeat 2 and 3 until queue empty
+5. return distance of query'd node

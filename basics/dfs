@@ -1,0 +1,9 @@
+Use DFS to find any path
+Uses a stack for backtracking
+
+1.Label all vertices as white
+2.Current Node = start node
+3.traverse by picking first white node available and adding it to the stack and coloring it gray.
+4.a. if current node is desired return path
+b.if dead end reached, label that node black and backtrack
+5.repeat 4 and 5
