@@ -28,9 +28,12 @@ class linkedList:
         current = self.head
         string = ""
         while(current != None):
-            string += str(current.getData()) + " "
+            string += str(current.getData()) + "->"
             current = current.getNext()
         return string
+
+    def getHead(self):
+        return self.head
 
     #returns true if empty
     def isEmpty(self):
@@ -65,7 +68,7 @@ class linkedList:
         return node
 
     #removes first node of desired value and deletes it
-    def remove(self, value):
+    def remove(self, data):
         head = self.head
         prev = None
         node = None
