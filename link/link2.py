@@ -6,7 +6,7 @@ from structures.linkedList import *
 
 def kFromLast(lizt, k):
     current = lizt.getHead()
-    count = 0
+    count = 1
     node = None
     while count < k and current.getNext() != None:
         count += 1
