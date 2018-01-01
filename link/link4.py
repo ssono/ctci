@@ -2,6 +2,11 @@ import sys
 sys.path.append("/home/ssono/projects/ctci/basics")
 from structures.linkedList import *
 
+"""Partition:
+write a function that takes as params a linked list and a number.
+The output should be the linked list where all values less than the partition value
+come before all the values greater than or equal to the partition val"""
+
 l = linkedList()
 l.add(1)
 l.add(2)

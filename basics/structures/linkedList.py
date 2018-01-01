@@ -47,6 +47,17 @@ class linkedList:
         newhead.setNext(self.head)
         self.head = newhead
 
+    def append(self, newdata):
+        new = LinkNode(newdata)
+        if self.head == None:
+            self.head = new
+
+        else:
+            current = self.head
+            while(current.getNext() != None):
+                current = current.getNext()
+            current.setNext(new)
+
     #returns the size of the linkedList
     def size(self):
         head = self.head
