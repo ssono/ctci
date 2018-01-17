@@ -57,6 +57,16 @@ class TreeNode:
             return True
         return False
 
+class BinTree:
+
+    def __init__(self):
+        self.root = None
+
+    def getRoot(self):
+        return self.root
+
+    def setRoot(self, newroot):
+        self.root = newroot 
 
 class BST:
 
