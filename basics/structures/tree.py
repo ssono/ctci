@@ -65,10 +65,26 @@ class BST:
         self.size = 0
 
     def __str__(self):
+        stringified = self.strHelp(self.root, "")
+
+    def strHelp(self, current, string)
+        if current == None:
+            return string
+        if not current.hasAny():
+            return str(current.getKey())
+        string += str(self.strHelp(current.getLeft(), string)) + " "
+        string += str(current.getKey()) + " "
+        string += str(self.strHelp(surrent.getRight(), string)) + " "
+        return string
+
+    def getSize(self):
         return self.size
 
-    def size(self):
-        return self.size
+    def getRoot(self):
+        return self.root
+
+    def setRoot(self, newroot):
+        self.root = newroot
 
     #find appropriate spot by searching for the node that isnt there, place the new node
     def add(self, key, data):
