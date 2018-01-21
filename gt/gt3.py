@@ -2,7 +2,7 @@ import sys
 sys.path.append("/home/ssono/projects/ctci/basics")
 
 from structures.tree import *
-from structures.linkedlist import *
+from structures.linkedList import *
 
 """
 List of Depths:

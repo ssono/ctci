@@ -66,7 +66,7 @@ class BinTree:
         return self.root
 
     def setRoot(self, newroot):
-        self.root = newroot 
+        self.root = newroot
 
 class BST:
 
@@ -77,7 +77,7 @@ class BST:
     def __str__(self):
         stringified = self.strHelp(self.root, "")
 
-    def strHelp(self, current, string)
+    def strHelp(self, current, string):
         if current == None:
             return string
         if not current.hasAny():
